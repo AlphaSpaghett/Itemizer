@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemManupulationComponent } from './Components/item-manupulation/item-manupulation.component';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Item } from './Objects/item';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [FormsModule],
+  providers: [FormsModule, Item],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
