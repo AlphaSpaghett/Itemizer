@@ -1,6 +1,5 @@
-export class item
-{
-  private upc: string = '';
-  private desc: string = '';
-  private price: string = '';
+export class Item {
+  public upc: string = '';
+  public desc: string = '';
+  public price: string = '';
 }
