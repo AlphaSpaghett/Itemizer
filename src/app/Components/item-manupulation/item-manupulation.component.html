@@ -1,0 +1,21 @@
+<form [formGroup]="itemForm" action="" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="upc">UPC</label>
+    <input id="upc" type="text" formControlName="upc">
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <input id="description" type="text" formControlName="description">
+  </div>
+  <div>
+    <label for="price">Price</label>
+    <input id="price" type="text" formControlName="price">
+  </div>
+  <button type="submit" [disabled]="itemForm.invalid">Submit</button>
+</form>
+
+<div>
+  <p>UPC: {{ item[0] }}</p>
+  <p>Desc: {{ item[1] }}</p>
+  <p>Price: {{ item[2] }}</p>
+</div>
