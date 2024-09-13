@@ -1,5 +1,5 @@
-export class Item {
-  public upc: string = '';
-  public desc: string = '';
-  public price: string = '';
+export interface Item {
+  upc: string;
+  desc: string;
+  price: string;
 }

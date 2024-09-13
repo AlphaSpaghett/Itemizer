@@ -15,20 +15,26 @@ export class ItemManupulationComponent implements OnInit {
     price: ['', Validators.required],
   });
 
-  constructor( private fb: FormBuilder, public item: Item ) { }
+  items: Item[] = [];
+
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    this.item.upc = this.itemForm.value.upc;
-    this.item.desc = this.itemForm.value.description;
-    this.item.price = this.itemForm.value.price;
+    const item: Item = {
+      upc: this.itemForm.value.upc,
+      desc: this.itemForm.value.description,
+      price: this.itemForm.value.price,
+    }
 
-    console.log(`UPC: ${this.itemForm.value.upc}`);
-    console.log(`Desc: ${this.itemForm.value.description}`);
-    console.log(`Desc: ${this.item.desc}`);
-    console.log(`Price: ${this.itemForm.value.price}`);
+    this.items.push(item);
+
+    // console.log(`UPC: ${this.itemForm.value.upc}`);
+    // console.log(`Desc: ${this.itemForm.value.description}`);
+    // console.log(`Price: ${this.itemForm.value.price}`);
+    // console.log(this.items.length);
+
   }
-
 }

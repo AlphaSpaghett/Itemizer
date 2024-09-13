@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemManupulationComponent } from './Components/item-manupulation/item-manupulation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Item } from './Objects/item';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import { Item } from './Objects/item';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [FormsModule, Item],
+  providers: [FormsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
