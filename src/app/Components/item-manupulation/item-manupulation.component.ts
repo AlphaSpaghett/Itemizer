@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Item } from 'src/app/Objects/item';
+import { Item } from 'src/app/Objects/Item';
 
 @Component({
   selector: 'app-item-manupulation',
